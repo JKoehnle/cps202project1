@@ -1,4 +1,5 @@
 def userint():
+
   money = float(input("How much money do you have? ")) #gets amount of money and force conversion to float
 
   try: 
@@ -8,4 +9,4 @@ def userint():
     return userint() #recalls the function to correct error
 
 def state():
-    proceed = input("Do you wish to buy more from the vending machine enter true or false: ") #checks user state and desires
+    proceed = input("Do you wish to buy more from the vending machine enter true or false: ")

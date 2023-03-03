@@ -6,4 +6,15 @@ def printInven():
     for key, value in inventory.items():
         print(f'{key}:   Price ${value[0]}0  Number Left: {value[1]}')
 
-printInven()
+def getPrice(item):
+    return inventory(item)[0]
+
+def getNumLeft(item):
+    return inventory(item)[1]
+
+def changeNumLeft(item, numBought):
+    currInv = inventory(item)[1] 
+    if currInv - numBought < 0:
+        print("BREAK STOP THIS DOESNT WORK")
+    else:
+        inventory(item)[1] - numBought

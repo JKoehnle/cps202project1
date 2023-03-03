@@ -7,10 +7,24 @@ def printInven():
         print(f'{key}:   Price ${value[0]}0  Number Left: {value[1]}')
 
 def getPrice(item):
-    return inventory(item)[0]
+    return inventory[item][0]
 
 def getNumLeft(item):
-    return inventory(item)[1]
+    return inventory[item][1]
 
-def changeNumLeft(item, numBought):
-       inventory(item)[1] - numBought
+def canBuy(money):
+    items_can_buy = []
+    for key, value in inventory.items():
+         if value[0] <= money:
+              items_can_buy.append(key)
+    if len(items_can_buy) == 0:
+         print("You cannot afford anything")
+    else:
+        print("You can buy:")
+        for item in items_can_buy:
+            print(f'{item}:   Price ${inventory[item][0]}0  Number Left: {inventory[item][1]}')
+        
+
+def hasBought():
+     #subtract money;update iventory;output confirmation of purchase
+     pass

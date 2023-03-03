@@ -13,8 +13,4 @@ def getNumLeft(item):
     return inventory(item)[1]
 
 def changeNumLeft(item, numBought):
-    currInv = inventory(item)[1] 
-    if currInv - numBought < 0:
-        print("BREAK STOP THIS DOESNT WORK")
-    else:
-        inventory(item)[1] - numBought
+       inventory(item)[1] - numBought

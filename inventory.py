@@ -1,4 +1,4 @@
-inventory = {"Snickers" : [3.00, 5], "Cliffbar" : [5.00, 20], "Snapple" : [8.00, 7]}
+inventory = {"Snickers Bar" : [3.00, 5], "Cliffbar" : [5.00, 20], "Snapple" : [8.00, 7]}
 #Dict Format = {Key : List}; List = [price, numItem]
 
 def printInven():
@@ -12,6 +12,9 @@ def getPrice(item):
 def getNumLeft(item):
     return inventory[item][1]
 
+def getItem(itemNumber):
+    return inventory.keys[itemNumber - 1]
+
 def canBuy(money):
     items_can_buy = []
     for key, value in inventory.items():
@@ -22,9 +25,5 @@ def canBuy(money):
     else:
         print("You can buy:")
         for item in items_can_buy:
-            print(f'{item}:   Price ${inventory[item][0]}0  Number Left: {inventory[item][1]}')
-        
-
-def hasBought():
-     #subtract money;update iventory;output confirmation of purchase
-     pass
+            print(f'{items_can_buy.index(item) + 1}: {item} - Price ${inventory[item][0]}0  Number Left: {inventory[item][1]}')
+    return items_can_buy

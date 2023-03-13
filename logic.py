@@ -19,7 +19,7 @@ def get_proceed():
        return get_proceed()
 
 def itemSelection(items_can_buy):
-  item_number = int(input("Enter the number of the item you want to buy: ")) - 1
+  item_number = int(input("Enter the number of the item you want to buy(first number on the left): ")) - 1
   while (item_number < 0 or item_number >= len(items_can_buy)):
     print("You did not enter the correct number.")
     item_number = int(input("Please try again: ")) - 1
